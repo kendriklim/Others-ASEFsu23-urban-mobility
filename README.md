@@ -1,14 +1,21 @@
-﻿# asefsu23-urban-mobility
+﻿# Project Title: 
+ asefsu23-urban-mobility
 
 # Prototype development for the 23rd ASEF Summer University (ASEFSU23) hackathon
 
+## Problem statement:
+Develop a solution with digital components that helps overcome barriers to women’s mobility in Lahore.
+
+## Demo-Preview:
+Develop a solution with digital components that helps overcome barriers to women’s mobility in Lahore.
+
 # Table of contents
 - [Project Title] (#project-title)
-- [Problem statement
+- [Problem statement] (#problem-statement)
 - [Demo-Preview] (#demo-preview)
+- [Goals] (#goals)
 
-## Problem statement:
-Develop a solution with digital components that helps overcome barriers to women’s mobility in Lahore!
+
 
 ## Goals:
 (1) Develop a concrete solution to support women’s access and safety to urban mobility, ready to be implemented in Lahore.
@@ -16,6 +23,8 @@ Develop a solution with digital components that helps overcome barriers to women
 (2) Contribute to initiatives that facilitate more affordable, safe and gender responsive urban mobility in cities.
 
 (3) Create a positive impact on women’s participation in society and gender equality, to promote accessible, sustainable cities & communities.
+
+[ (Back to top) ] (#table-of-contents)
 
 ## Overview:
 Urban mobility has become a staggering challenge faced by ever-expanding cities across the world. Congestion and public transport inadequacy, the lack of connectivity and infrastructure, accidents & safety issues as well as environmental pollution are some important factors which greatly impact people’s quality of life. Unequitable access to urban mobility also hinders socioeconomic prosperity, limiting access to education & job opportunities.
