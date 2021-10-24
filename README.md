@@ -7,7 +7,9 @@ Develop a solution with digital components that helps overcome barriers to women
 
 ## Goals:
 (1) Develop a concrete solution to support women’s access and safety to urban mobility, ready to be implemented in Lahore.
+
 (2) Contribute to initiatives that facilitate more affordable, safe and gender responsive urban mobility in cities.
+
 (3) Create a positive impact on women’s participation in society and gender equality, to promote accessible, sustainable cities & communities.
 
 ## Overview:
