@@ -1,4 +1,4 @@
-# asefsu23-urban-mobility
+﻿# asefsu23-urban-mobility
 
 Prototype development for the 23rd ASEF Summer University (ASEFSU23) hackathon
 
@@ -14,7 +14,7 @@ Overview:
 Urban mobility has become a staggering challenge faced by ever-expanding cities across the world. Congestion and public transport inadequacy, the lack of connectivity and infrastructure, accidents & safety issues as well as environmental pollution are some important factors which greatly impact people’s quality of life. Unequitable access to urban mobility also hinders socioeconomic prosperity, limiting access to education & job opportunities.
 
 Almost 50% of Pakistan’s total 190 million population lives in urban areas, making it the most urbanised country in the Asia-Pacific. About two thirds of its urban population is concentrated in ten cities, which are witnessing an unbalanced reliance on a few modes of transport (private vehicles such as motorbikes & cars) and limited affordable mass transit options. Inefficient urban planning
-policies and practices, coupled with urban sprawl and a lack of sustainable modes of urban transport have made mobility either unaffordable or inaccessible for a large segment of the society, especially low and lower-middle income communities and people with disabilities.
+policies and practices, coupled with urban sprawl and a lack of sustainable modes of urban transport have made mobility either unaffordable or inaccessible for a large segment of the society, especially low and lower-middle income communities, and people with disabilities.
 
 Another key concern is the lack of safety in public transportation in Pakistan, especially for women and youth. According to a report by ADB, 31% of students, 23% of working women and 20% of homemakers decreased their use of public transport due to harassment. Among them, 40% avoid traveling after sunset which reduces their chances of employability and income generating opportunities.
 
