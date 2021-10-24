@@ -1,5 +1,4 @@
-﻿# Project Title: 
- asefsu23-urban-mobility
+﻿# Project Title: asefsu23-urban-mobility
 
 # Prototype development for the 23rd ASEF Summer University (ASEFSU23) hackathon
 
@@ -10,7 +9,7 @@ Develop a solution with digital components that helps overcome barriers to women
 Develop a solution with digital components that helps overcome barriers to women’s mobility in Lahore.
 
 # Table of contents
-- [Project Title] (#project-title)
+- [Project Title] (#https://github.com/kendriklim/asefsu23-urban-mobility/blob/main/README.md#project-title)
 - [Problem statement] (#problem-statement)
 - [Demo-Preview] (#demo-preview)
 - [Goals] (#goals)
