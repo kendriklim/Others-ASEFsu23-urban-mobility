@@ -28,7 +28,7 @@ const HomeScreen = () => {
           placeholder="Where From?"
           styles={{
             container: {
-              flex: 10,
+              flex: 0,
             },
             textInput: {
               fontSize: 18,
