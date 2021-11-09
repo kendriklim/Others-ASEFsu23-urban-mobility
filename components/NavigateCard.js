@@ -5,13 +5,15 @@ import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplet
 import { GOOGLE_MAPS_APIKEY } from "@env";
 import { useDispatch } from "react-redux";
 import { setDestination } from "../slices/navSlice";
+import { useNavigation } from "@react-navigation/core";
 
 const NavigateCard = () => {
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
-      <Text style={tw`text-center py-5 text-xl`}>Good morning</Text>
+      <Text style={tw`text-center py-5 text-xl`}>Good day, ASEF judges</Text>
       <View style={tw`border-t border-gray-200 flex-shrink`}>
         <View>
           <GooglePlacesAutocomplete
@@ -27,10 +29,11 @@ const NavigateCard = () => {
                   description: data.description,
                 })
               );
+              navigation.navigate("RideOptionsCard");
             }}
             enablePoweredByContainer={false}
             query={{
-              key: GOOGLE_MAPS_APIKEY,
+              key: "AIzaSyDgn5900zen3QjId3BBxov06BkvuLNl9jw",
               language: "en",
             }}
             nearbyPlacesAPI="GooglePlacesSearch"
