@@ -4,6 +4,9 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Provider } from "react-redux";
 import HomeScreen from "./screens/HomeScreen";
 import MapScreen from "./screens/MapScreen";
+import Onboarding from "./screens/OnboardingScreen";
+import LoginScreen from "./screens/LoginScreen";
+
 import { store } from "./store";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
@@ -25,7 +28,17 @@ export default function App() {
             keyboardVerticalOffset={Platform.OS === "ios" ? -64 : 0}
             style={{ flex: 1 }}
           >
-            <Stack.Navigator>
+            <Stack.Navigator headerMode="none">
+            <Stack.Screen
+                name="OnboardingScreen"
+                component={Onboarding}
+                options={{ headerShown: false }}
+              />
+                  <Stack.Screen
+                name="Login"
+                component={LoginScreen}
+                options={{ headerShown: false }}
+              />
               <Stack.Screen
                 name="HomeScreen"
                 component={HomeScreen}

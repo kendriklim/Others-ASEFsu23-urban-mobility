@@ -1,9 +1,16 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import tw from "tailwind-react-native-classnames";
-import { Icon } from "react-native-elements";
+import { Icon,Button } from "react-native-elements";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {SafetyAudit} from './SafetyAudit';
 
-const NavOptions = () => {
+const NavOptions = ({navigation}) => {
+
+
+  const Stack = createNativeStackNavigator();
+
   return (
     <View style={tw`bg-white`}>
       <View style={tw`p-5`}>
@@ -36,6 +43,18 @@ const NavOptions = () => {
           />
           <Text style={tw`ml-1 text-black`}>Eats</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={tw`flex flex-row bg-white pb-2 pt-3 px-4 items-center rounded-full `}
+        >
+          <Icon
+            name="alert-circle-outline"
+            type="ionicon"
+            color="black"
+            size={16}
+          />
+          <Text style={tw`ml-1 text-black`}>Safety Audit</Text>
+        </TouchableOpacity>
+ 
       </View>
     </View>
   );
