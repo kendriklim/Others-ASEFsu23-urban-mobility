@@ -4,6 +4,15 @@ import React from 'react';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  Image,
+  TouchableOpacity,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { NavigationContainer } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import ChatScreen from './ChatScreen'
@@ -12,17 +21,26 @@ const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
 import SafetyAudit from '../components/SafetyAudit'
 import ProfileScreen from './ProfileScreen'
+import  { useState, useEffect } from 'react';
 
 const Tab = createMaterialBottomTabNavigator();
+import { BackHandler } from 'react-native';
 
-const HomeScreen = () => (
+
+
+
+
+const HomeScreen = ({navigation}
+  
+) => {
+return(
     <Tab.Navigator
       initialRouteName="Home"
       activeColor="#000000"
       barStyle={{ backgroundColor: '#f0ada4' }}
     >
       <Tab.Screen
-        name="Home"
+        name="SearchPlace"
         component={SearchPlace}
         options={{
           tabBarLabel: 'Home',
@@ -32,17 +50,7 @@ const HomeScreen = () => (
           ),
         }}
       />
-      <Tab.Screen
-        name="Notifications"
-        component={ChatScreen}
-        options={{
-          tabBarLabel: 'Messages',
-          tabBarColor: '#f0ada4',
-          tabBarIcon: ({ color }) => (
-            <Icon name="chatbox-ellipses-outline" color={color} size={26} />
-          ),
-        }}
-      />
+     
  <Tab.Screen
         name="SafetyAudit"
         component={SafetyAudit}
@@ -66,8 +74,20 @@ const HomeScreen = () => (
           ),
         }}
       />
+
+<Tab.Screen
+        name="Notifications"
+        component={ChatScreen}
+        options={{
+          tabBarLabel: 'Messages',
+          tabBarColor: '#f0ada4',
+          tabBarIcon: ({ color }) => (
+            <Icon name="chatbox-ellipses-outline" color={color} size={26} />
+          ),
+        }}
+      />
     </Tab.Navigator>
-);
+);}
 
 export default HomeScreen;
 

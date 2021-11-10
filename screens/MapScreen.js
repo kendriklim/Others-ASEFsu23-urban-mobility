@@ -5,6 +5,7 @@ import Maps from "../components/Maps";
 import NavigateCard from "../components/NavigateCard";
 import RideOptionsCard from "../components/RideOptionsCard";
 import SafetyAudit from "../components/SafetyAudit";
+import SearchPlace from "./SearchPlace";
 
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -18,6 +19,7 @@ const MapScreen = () => {
 
       <View style={tw`h-1/2 border-t-2 border-gray-800`}>
         <Stack.Navigator>
+
           <Stack.Screen
             name="NavigateCard"
             component={NavigateCard}
