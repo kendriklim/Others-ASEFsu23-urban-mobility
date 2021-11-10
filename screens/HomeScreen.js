@@ -16,6 +16,9 @@ import { GOOGLE_MAPS_APIKEY } from "@env";
 import { useDispatch } from "react-redux";
 import { setDestination, setOrigin } from "../slices/navSlice";
 import { useNavigation } from "@react-navigation/native";
+import { Button } from "react-native-elements/dist/buttons/Button";
+import SafetyAudit from "../components/SafetyAudit";
+import SampleApp from '../components/SampleApp'
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -23,7 +26,10 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView>
+     <SampleApp />
+     
       <NavOptions />
+{/* <SafetyAudit /> */}
       <View style={tw`p-5 h-full bg-gray-200`}>
         <View style={tw`p-2 w-full`}>
           <GooglePlacesAutocomplete
