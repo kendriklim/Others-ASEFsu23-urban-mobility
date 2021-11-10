@@ -1,73 +1,92 @@
-import React from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Image,
-  TouchableOpacity,
-} from "react-native";
-import tw from "tailwind-react-native-classnames";
-import NavOptions from "../components/NavOptions";
-import NavFavourites from "../components/NavFavourites";
-import { Icon } from "react-native-elements";
 
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
-import { GOOGLE_MAPS_APIKEY } from "@env";
-import { useDispatch } from "react-redux";
-import { setDestination, setOrigin } from "../slices/navSlice";
-import { useNavigation } from "@react-navigation/native";
-import { Button } from "react-native-elements/dist/buttons/Button";
-import SafetyAudit from "../components/SafetyAudit";
-import SampleApp from '../components/SampleApp'
 
-const HomeScreen = () => {
-  const dispatch = useDispatch();
-  const navigation = useNavigation();
+import React from 'react';
 
-  return (
-    <SafeAreaView>
-     <SampleApp />
-     
-      <NavOptions />
-{/* <SafetyAudit /> */}
-      <View style={tw`p-5 h-full bg-gray-200`}>
-        <View style={tw`p-2 w-full`}>
-          <GooglePlacesAutocomplete
-            placeholder={"Where from?"}
-            styles={{
-              container: { flex: 0 },
-              textInput: {
-                fontSize: 18,
-              },
-            }}
-            onPress={(data, details = null) => {
-              dispatch(
-                setOrigin({
-                  location: details.geometry.location,
-                  description: data.description,
-                })
-              );
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 
-              dispatch(setDestination(null));
+import Icon from 'react-native-vector-icons/Ionicons';
+import ChatScreen from './ChatScreen'
+import SearchPlace from './SearchPlace';
+const HomeStack = createStackNavigator();
+const DetailsStack = createStackNavigator();
+import SafetyAudit from '../components/SafetyAudit'
+import ProfileScreen from './ProfileScreen'
 
-              navigation.navigate("MapScreen");
-            }}
-            fetchDetails={true}
-            retrunKeyType={"search"}
-            enablePoweredByContainer={false}
-            minLenght={2}
-            query={{
-              key: "AIzaSyDgn5900zen3QjId3BBxov06BkvuLNl9jw",
-              language: "en",
-            }}
-            nearbyPlacesAPI="GooglePlacesSearch"
-            debounce={200}
-          />
-        </View>
-        <NavFavourites />
-      </View>
-    </SafeAreaView>
-  );
-};
+const Tab = createMaterialBottomTabNavigator();
+
+const HomeScreen = () => (
+    <Tab.Navigator
+      initialRouteName="Home"
+      activeColor="#000000"
+      barStyle={{ backgroundColor: '#f0ada4' }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={SearchPlace}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarColor: '#f0ada4',
+          tabBarIcon: ({ color }) => (
+            <Icon name="ios-home" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={ChatScreen}
+        options={{
+          tabBarLabel: 'Messages',
+          tabBarColor: '#f0ada4',
+          tabBarIcon: ({ color }) => (
+            <Icon name="chatbox-ellipses-outline" color={color} size={26} />
+          ),
+        }}
+      />
+ <Tab.Screen
+        name="SafetyAudit"
+        component={SafetyAudit}
+        options={{
+          tabBarLabel: 'SafetyAudit',
+          tabBarColor: '#f0ada4',
+          tabBarIcon: ({ color }) => (
+            <Icon name="alert-circle-outline" color={color} size={26} />
+          ),
+        }}
+      />
+
+<Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarColor: '#f0ada4',
+          tabBarIcon: ({ color }) => (
+            <Icon name="person-outline" color={color} size={26} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+);
 
 export default HomeScreen;
+
+
+
+// const DetailsStackScreen = ({navigation}) => (
+// <DetailsStack.Navigator screenOptions={{
+//         headerStyle: {
+//         backgroundColor: '#ffffff',
+//         },
+//         headerTintColor: 'red',
+//         headerTitleStyle: {
+//         fontWeight: 'bold'
+//         }
+//     }}>
+//         <DetailsStack.Screen name="Details" component={DetailsScreen} options={{
+//         headerLeft: () => (
+//             <Icon.Button name="ios-menu" size={25} backgroundColor="red" onPress={() => navigation.openDrawer()}></Icon.Button>
+//         )
+//         }} />
+// </DetailsStack.Navigator>
+// );
