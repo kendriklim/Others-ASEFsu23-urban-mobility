@@ -52,7 +52,7 @@ const LoginScreen = ({navigation}) => {
       <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
         <Text style={styles.navButtonText}>Forgot Password?</Text>
       </TouchableOpacity>
-
+{/* 
       {Platform.OS === 'android' ? (
         <View>
           <SocialButton
@@ -71,7 +71,7 @@ const LoginScreen = ({navigation}) => {
             onPress={() => googleLogin()}
           />
         </View>
-      ) : null}
+      ) : null} */}
 
       <TouchableOpacity
         style={styles.forgotButton}
@@ -90,28 +90,31 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-    paddingTop: 30
+    paddingLeft:20,
+    paddingRight:20
   },
   logo: {
     height: 150,
-    width: 300,
+    width: 400,
+    marginBottom:25,
+    marginTop:0,
     resizeMode: 'cover',
   },
   text: {
     fontSize: 28,
-    marginBottom: 10,
+    marginBottom:15,
     color: '#051d5f',
   },
   navButton: {
     marginTop: 15,
   },
   forgotButton: {
-    marginVertical: 35,
+    marginVertical: 15,
   },
   navButtonText: {
     fontSize: 15,
     fontWeight: '500',
     color: '#2e64e5',
+    marginBottom:2
   },
 });

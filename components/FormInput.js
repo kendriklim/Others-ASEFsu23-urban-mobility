@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: windowHeight / 15,
     borderColor: '#ccc',
-    borderRadius: 3,
+    borderRadius: 25,
     borderWidth: 1,
     flexDirection: 'row',
     alignItems: 'center',
@@ -42,9 +42,12 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRightColor: '#ccc',
+    borderRightColor: 'pink',
+    borderLeftColor:'pink',
+    backgroundColor:"pink",
     borderRightWidth: 1,
     width: 50,
+    borderRadius:25
   },
   input: {
     padding: 10,

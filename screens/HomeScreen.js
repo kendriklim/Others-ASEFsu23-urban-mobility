@@ -18,7 +18,7 @@ import { setDestination, setOrigin } from "../slices/navSlice";
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "react-native-elements/dist/buttons/Button";
 import SafetyAudit from "../components/SafetyAudit";
-import PickerD from '../components/Picker'
+import SampleApp from '../components/SampleApp'
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -26,10 +26,11 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView>
+     <SampleApp />
      
       <NavOptions />
 {/* <SafetyAudit /> */}
-      {/* <View style={tw`p-5 h-full bg-gray-200`}>
+      <View style={tw`p-5 h-full bg-gray-200`}>
         <View style={tw`p-2 w-full`}>
           <GooglePlacesAutocomplete
             placeholder={"Where from?"}
@@ -64,7 +65,7 @@ const HomeScreen = () => {
           />
         </View>
         <NavFavourites />
-      </View> */}
+      </View>
     </SafeAreaView>
   );
 };

@@ -13,14 +13,14 @@ const NavOptions = ({navigation}) => {
 
   return (
     <View style={tw`bg-white`}>
-      <View style={tw`p-5`}>
+      {/* <View style={tw`p-5`}>
         <Image
           style={{ width: 100, height: 50, resizeMode: "contain" }}
           source={{
             uri: "https://links.papareact.com/gzs",
           }}
         />
-      </View>
+      </View> */}
 
       <View
         style={tw`flex-row items-center justify-around border-gray-800 border-b-2`}
