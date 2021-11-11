@@ -5,10 +5,11 @@ import { Icon,Button } from "react-native-elements";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {SafetyAudit} from './SafetyAudit';
+import { useNavigation} from "@react-navigation/native";
 
-const NavOptions = ({navigation}) => {
 
-
+const NavOptions = ({}) => {
+  const navigation = useNavigation();
   const Stack = createNativeStackNavigator();
 
   return (
@@ -23,12 +24,14 @@ const NavOptions = ({navigation}) => {
           height:200,
           backgroundColor:'#cd5c5c',
           borderRadius:100,
-          marginLeft:100,
-          marginBottom:40
+          marginLeft:100
         }}
+        onPress={() => { navigation.navigate("VolunteerScreen"); }}
     >
-      <Icon name="alert-outline" type="ionicon" color="white"  size={30} /><Text    style={{ marginLeft:10 ,marginRight:10,textAlign:"center" ,textDecorationStyle:"solid",color:"white"
+      <Icon name="alert-outline" type="ionicon" color="white"  size={30} /><Text    
+        style={{ marginLeft:10 ,marginRight:10,textAlign:"center" ,textDecorationStyle:"solid",color:"white"
         }} >RESCUE VOLUNTEER BULAO</Text>
+      
     </TouchableOpacity>
    
        </View>
