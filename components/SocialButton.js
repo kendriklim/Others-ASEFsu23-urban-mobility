@@ -53,6 +53,5 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 12,
     fontWeight: 'bold',
-    fontFamily: 'Lato-Regular',
   },
 });

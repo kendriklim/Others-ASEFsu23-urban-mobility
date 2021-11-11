@@ -7,6 +7,7 @@ import MapScreen from "./screens/MapScreen";
 import Onboarding from "./screens/OnboardingScreen";
 import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
+import SearchPlace from "./screens/SearchPlace";
 
 import { store } from "./store";
 import "react-native-gesture-handler";
@@ -53,6 +54,12 @@ export default function App() {
                  <Stack.Screen
                 name="Signup"
                 component={SignupScreen}
+                options={{ headerShown: false }}
+              />
+
+<Stack.Screen
+                name="SearchPlace"
+                component={SearchPlace}
                 options={{ headerShown: false }}
               />
             </Stack.Navigator>

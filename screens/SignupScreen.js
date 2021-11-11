@@ -112,7 +112,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '500',
     color: '#2e64e5',
-    fontFamily: 'Lato-Regular',
   },
   textPrivate: {
     flexDirection: 'row',
@@ -123,7 +122,6 @@ const styles = StyleSheet.create({
   color_textPrivate: {
     fontSize: 13,
     fontWeight: '400',
-    fontFamily: 'Lato-Regular',
     color: 'grey',
   },
 });

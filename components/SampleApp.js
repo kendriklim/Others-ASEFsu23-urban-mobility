@@ -23,7 +23,8 @@ const NavOptions = ({navigation}) => {
           height:200,
           backgroundColor:'#cd5c5c',
           borderRadius:100,
-          marginLeft:100
+          marginLeft:100,
+          marginBottom:40
         }}
     >
       <Icon name="alert-outline" type="ionicon" color="white"  size={30} /><Text    style={{ marginLeft:10 ,marginRight:10,textAlign:"center" ,textDecorationStyle:"solid",color:"white"

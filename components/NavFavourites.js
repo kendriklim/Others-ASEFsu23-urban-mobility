@@ -14,20 +14,20 @@ const data = [
     icon: "home",
     label: "Home",
     location: {
-      lat: 51.522392,
-      lng: -0.07083420000000001,
+      lat: 31.51996749324847,
+      lng: 74.32559670041191,
     },
-    description: "Code Street, London, UK",
+    description: "Canal North Metro Station",
   },
   {
     id: "8",
     icon: "briefcase",
     label: "Work",
     location: {
-      lat: 51.5032973,
-      lng: -0.1195537,
+      lat: 31.51801782665679,
+      lng: 74.32168794095695,
     },
-    description: "London Eye, London, UK",
+    description: "Ayesha Street",
   },
   {
     id: "9",
@@ -54,7 +54,7 @@ const NavFavourites = () => {
       <FlatList
         style={tw`px-6`}
         data={
-          route.name !== "HomeScreen"
+          route.name !== "SearchPlace"
             ? data.filter((fav) => fav.description !== origin?.description)
             : data
         }
@@ -63,7 +63,8 @@ const NavFavourites = () => {
           <TouchableOpacity
             style={tw`flex-row items-center rounded-full bg-white mb-2 p-2`}
             onPress={() => {
-              if (route.name === "HomeScreen") {
+              console.log(route.name)
+              if (route.name ==="SearchPlace") {
                 dispatch(
                   setOrigin({
                     location: location,
