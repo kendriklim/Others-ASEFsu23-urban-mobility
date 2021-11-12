@@ -8,6 +8,8 @@ import Onboarding from "./screens/OnboardingScreen";
 import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
 import SearchPlace from "./screens/SearchPlace";
+import VolunteerScreen from "./screens/VolunteerScreen";
+import CallScreen from "./screens/CallScreen";
 
 import { store } from "./store";
 import "react-native-gesture-handler";
@@ -57,9 +59,19 @@ export default function App() {
                 options={{ headerShown: false }}
               />
 
-<Stack.Screen
+              <Stack.Screen
                 name="SearchPlace"
                 component={SearchPlace}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="VolunteerScreen"
+                component={VolunteerScreen}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="CallScreen"
+                component={CallScreen}
                 options={{ headerShown: false }}
               />
             </Stack.Navigator>
