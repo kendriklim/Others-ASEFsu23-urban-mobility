@@ -28,7 +28,7 @@ const NavOptions = ({}) => {
           marginLeft:100,
           marginBottom:40
         }}
-        onPress={() => { navigation.navigate("VolunteerScreen"); }}
+        onPress={() => { navigation.navigate("CallScreen"); }}
     >
       <Icon name="alert-outline" type="ionicon" color="white"  size={30} /><Text    style={{ marginLeft:10 ,marginRight:10,textAlign:"center" ,textDecorationStyle:"solid",color:"white"
         }} >RESCUE VOLUNTEER BULAO</Text>
