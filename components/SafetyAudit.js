@@ -62,7 +62,7 @@ const displayDatepicker = () => {
 
     <FormButton
         buttonTitle="Submit"
-        onPress={() => navigation.navigate("HomeScreen")}
+        onPress={() => navigation.navigate("SubmitScreen")}
         
       />
     </Card.Actions>
