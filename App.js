@@ -10,6 +10,8 @@ import SignupScreen from "./screens/SignupScreen";
 import SearchPlace from "./screens/SearchPlace";
 import VolunteerScreen from "./screens/VolunteerScreen";
 import CallScreen from "./screens/CallScreen";
+import ChatScreen from "./screens/ChatScreen";
+import SubmitScreen from "./screens/SubmitScreen";
 
 import { store } from "./store";
 import "react-native-gesture-handler";
@@ -21,6 +23,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
+    
       <NavigationContainer>
         <SafeAreaProvider
           style={{
@@ -48,6 +51,11 @@ export default function App() {
                 component={HomeScreen}
                 options={{ headerShown: false }}
               />
+                    <Stack.Screen
+                name="ChatScreen"
+                component={ChatScreen}
+                options={{ headerShown: false }}
+              />
               <Stack.Screen
                 name="MapScreen"
                 component={MapScreen}
@@ -62,6 +70,12 @@ export default function App() {
               <Stack.Screen
                 name="SearchPlace"
                 component={SearchPlace}
+                options={{ headerShown: false }}
+              />
+              
+              <Stack.Screen
+                name="SubmitScreen"
+                component={SubmitScreen}
                 options={{ headerShown: false }}
               />
               <Stack.Screen
