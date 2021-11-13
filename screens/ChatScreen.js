@@ -3,12 +3,10 @@ import {View, ScrollView, Text, Button, StyleSheet,KeyboardAvoidingView} from 'r
 import {Bubble, GiftedChat, Send} from 'react-native-gifted-chat';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { BackgroundImage } from 'react-native-elements/dist/config';
-
 const ChatScreen = () => {
   const [messages, setMessages] = useState([]);
-  
 
+    
 
   useEffect(() => {
     setMessages([
@@ -20,7 +18,7 @@ const ChatScreen = () => {
         user: {
           _id: 2,
           name: 'React Native',
-          avatar: 'https://c8.alamy.com/comp/JAM81P/beautiful-muslim-woman-in-hijab-closing-her-eyes-vector-flat-icon-JAM81P.jpg',
+          avatar: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/female.png',
         },
       },
       {        text: 'Hey where are you?',
@@ -45,6 +43,7 @@ const ChatScreen = () => {
 
   const renderSend = (props) => {
     return (
+      
       <Send {...props}>
         <View>
           <MaterialCommunityIcons
@@ -76,14 +75,14 @@ const ChatScreen = () => {
     );
   };
 
-//   const scrollToBottomComponent = () => {
-//     return(
-//       <FontAwesome name='angle-double-down' size={22} color='#f0ada4' />
-//     );
-//   }
+  const scrollToBottomComponent = () => {
+    return(
+      <FontAwesome name='angle-double-down' size={22} color='#f0ada4' />
+    );
+  }
 
   return (
-   
+
     <GiftedChat
       messages={messages}
       user={{
@@ -92,7 +91,7 @@ const ChatScreen = () => {
       renderBubble={renderBubble}
       alwaysShowSend
       renderSend={renderSend}
-    /> 
+    />
   );
 };
 
@@ -103,7 +102,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor:"f7c4b2"
-   
   },
 });

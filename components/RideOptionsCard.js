@@ -100,8 +100,10 @@ const RideOptionsCard = () => {
       <TouchableOpacity
         disabled={!selected}
         style={tw`bg-red-500 py-3 ${!selected && "bg-red-300"}`}
+        onPress={() => { navigation.navigate("CallScreen"); }}
       >
         <Text style={tw`text-center text-white font-semibold text-base `}>
+
           Choose {selected?.title}
         </Text>
       </TouchableOpacity>

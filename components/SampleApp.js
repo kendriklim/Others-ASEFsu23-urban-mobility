@@ -28,7 +28,7 @@ const NavOptions = ({}) => {
           // marginLeft:100,
           // marginBottom:40
         }}
-        onPress={() => { navigation.navigate("VolunteerScreen"); }}
+        onPress={() => { navigation.navigate("CallScreen"); }}
     >
       {/* <Icon name="alert-outline" type="ionicon" color="white"  size={30} /> */}
       <Image source={require('../assets/callrescue.png')} style={{height:200,width:200}}></Image>

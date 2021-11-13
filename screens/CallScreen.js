@@ -26,14 +26,19 @@ const styles = StyleSheet.create({
     width: 350,
     height: 200,
     position: 'relative',
+    marginTop: 10,
   },
   image2: {
-    width: 200,
-    height: 200,
+    width: 75,
+    height: 75,
   },
   image3: {
     width: 200,
     height: 200,
+  },
+  image4: {
+    width: 80,
+    height: 80,
   },
   iconContainer: {
       height: 100,
@@ -81,13 +86,14 @@ const CallScreen = () => {
           <Icon name="arrow-back" type="ionicon" color="black" size={24} />
         </TouchableOpacity>
       </View>
+
       <View style={{justifyContent: 'flex-start', alignItems: 'center', marginTop: 50}}>
         <Image
         style={styles.image1}
         source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/message.png'}}
         />
-        <Text style={tw`italic font-bold absolute top-10 text-center left-10 right-10 text-xl`}>Samna has accepted your request.
-         Please wait at the Code Street</Text>
+        <Text style={tw`italic font-bold absolute top-20 bottom-10 flex justify-center text-center left-10 right-10 text-xl`}>Alina has accepted your request.
+         She will be there in 2 minutes</Text>
       </View>
       <View style={{justifyContent: 'flex-start', alignItems: 'flex-end'}}>
         <Image
@@ -95,25 +101,34 @@ const CallScreen = () => {
         source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/female1.png'}}
         />
       </View>
-      {/* <View style={{justifyContent: 'center', alignItems: 'center', marginTop: 80}}>
-        <Image
-        style={styles.image2}
-        source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/call.png'}}
+      
+      <View style={{flexDirection:'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 190}}>
+        <TouchableOpacity
+          style={{
+              alignItems:'center',
+              justifyContent:'center',
+            }}
+        >
+         <Image
+          style={styles.image2}
+          source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/call1.png'}}
         />
-      </View> */}
-
-      <TouchableOpacity
-      style={{
-          alignItems:'center',
-          justifyContent:'center',
-        }}
-        onPress={() => { navigation.navigate("ChatScreen"); }}
-    >
-      {/* <Icon name="alert-outline" type="ionicon" color="white"  size={30} /> */}
-      <Image source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/message3.png'}} style={{height:200,width:200}}></Image>
-      {/* <Text    style={{ fontSize:20, marginLeft:10 ,marginRight:10,textAlign:"center" ,textDecorationStyle:"solid",color:"white"
-        }} >CALL RESCUE</Text> */}
-    </TouchableOpacity>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+              alignItems:'center',
+              justifyContent:'center',
+            }}
+            onPress={() => { navigation.navigate("ChatScreen"); }}
+        >
+          <Image 
+          style={styles.image4}
+          source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/message5.png'}}
+          />
+          
+        </TouchableOpacity>
+        
+      </View>
     </SafeAreaView>
   );
 };

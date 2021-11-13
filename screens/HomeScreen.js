@@ -22,6 +22,7 @@ const DetailsStack = createStackNavigator();
 import SafetyAudit from '../components/SafetyAudit'
 import ProfileScreen from './ProfileScreen'
 import  { useState, useEffect } from 'react';
+import VolunteerScreen from './VolunteerScreen'
 
 const Tab = createMaterialBottomTabNavigator();
 import { BackHandler } from 'react-native';
@@ -67,7 +68,7 @@ return(
 
 <Tab.Screen
         name="Notifications"
-        component={ChatScreen}
+        component={VolunteerScreen}
         options={{
           tabBarLabel: 'Messages',
           tabBarColor: '#f7c4b2',
