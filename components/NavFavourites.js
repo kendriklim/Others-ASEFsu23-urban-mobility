@@ -14,30 +14,30 @@ const data = [
     icon: "home",
     label: "Home",
     location: {
-      lat: 31.51996749324847,
-      lng: 74.32559670041191,
+      lat: 31.521920,
+      lng: 74.319458,
     },
-    description: "Canal North Metro Station",
+    description: "172-D, Rehmanpura Colony, Lahore",
   },
   {
     id: "8",
-    icon: "briefcase",
-    label: "Work",
+    icon: "train-outline",
+    label: "Metro station",
     location: {
-      lat: 31.51801782665679,
-      lng: 74.32168794095695,
+      lat: 31.519963147574664,
+      lng: 74.32558147800962,
     },
-    description: "Ayesha Street",
+    description: "Canal north metro station",
   },
   {
     id: "9",
-    icon: "school",
-    label: "Library",
+    icon: "bus-outline",
+    label: "Bus stop",
     location: {
-      lat: 51.4995,
-      lng: -0.1034399,
+      lat: 31.51725045809368,
+      lng: 74.31633169370318,
     },
-    description: "Library Street, London, UK",
+    description: "Naqsha Bus stop",
   },
 ];
 

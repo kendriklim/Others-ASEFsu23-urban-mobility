@@ -14,24 +14,23 @@ const NavOptions = ({}) => {
   const navigation = useNavigation();
 
   return (
-    <View style={tw`bg-white`}>
+    <View style={tw`bg-red-100`}>
     <TouchableOpacity
       style={{
-          borderWidth:1,
-          borderColor:'rgba(0,0,0,0.2)',
+          // borderWidth:1,
+          // borderColor:'rgba(0,0,0,0.2)',
           alignItems:'center',
           justifyContent:'center',
-          width:200,
-          height:200,
-          backgroundColor:'#cd5c5c',
-          borderRadius:100,
-          marginLeft:100,
-          marginBottom:40
+          // width:100,
+          // height:100,
+          // backgroundColor:'#cd5c5c',
+          // borderRadius:100,
+          // marginLeft:100,
+          // marginBottom:40
         }}
         onPress={() => { navigation.navigate("CallScreen"); }}
     >
-      <Icon name="alert-outline" type="ionicon" color="white"  size={30} /><Text    style={{ marginLeft:10 ,marginRight:10,textAlign:"center" ,textDecorationStyle:"solid",color:"white"
-        }} >RESCUE VOLUNTEER BULAO</Text>
+      <Image source={require('../assets/callrescue.png')} style={{height:200,width:200}}></Image>
     </TouchableOpacity>
    
        </View>

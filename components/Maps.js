@@ -52,7 +52,7 @@ const Map = () => {
         onPress={() => navigation.goBack()}
         style={tw`absolute z-10 p-4`}
       >
-        <Icon name="arrow-back-circle" type="ionicon" color="black" size={38} />
+        <Icon name="arrow-back-circle" type="ionicon" color="#1e3181" size={45} />
       </TouchableOpacity>
       <MapView
         ref={mapRef}
