@@ -23,14 +23,14 @@ import SampleApp from '../components/SampleApp'
 const SearchPlace = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
-
+var te="#ffffff"
   return (
     <SafeAreaView>
      <SampleApp />
      
       {/* <NavOptions /> */}
 {/* <SafetyAudit /> */}
-      <View style={tw`p-5 h-full bg-gray-200`}>
+      <View style={tw`p-5 h-full bg-red-100 200`}>
         <View style={tw`p-2 w-full`}>
           <GooglePlacesAutocomplete
             placeholder={"Where from?"}

@@ -11,10 +11,6 @@ const Dots = ({selected}) => {
     return (
         <View 
             style={{
-                width:6,
-                height: 6,
-                marginHorizontal: 3,
-                backgroundColor
             }}
         />
     );
@@ -58,22 +54,23 @@ const OnboardingScreen = ({navigation}) => {
         onDone={() => navigation.navigate("Login")}
         pages={[
           {
-            backgroundColor: '#a6e4d0',
-            image: <Image  style={{width: '50%', height: '50%'}} source={{uri:'https://raw.githubusercontent.com/itzpradip/react-native-firebase-social-app/master/assets/onboarding-img1.png'}} />,
-            title: 'Walk Saath!',
-            subtitle: 'A New Way To Connect With The World while walking safely home',
+            backgroundColor: '#b8bbf1',
+            image: <Image  style={{width: 200, height: 400,resizeMode:'contain',marginBottom:0}} source={require('../assets/1.png')} />,
+            title:<Text  style={{fontSize:30 ,fontFamily: "arial",fontWeight:"bold",marginBottom:30,color:"#e8602e"}}>WalkSaath!</Text>,
+            subtitle:<Text  style={{fontSize:15 ,fontFamily: "arial",marginBottom:25,color:"black",alignContent:"center",alignItems:"center",textAlign:"center"}}>Connect with your community to get home safely</Text>,
           },
           {
-            backgroundColor: '#fdeb93',
-            image: <Image  style={{width: '50%', height: '50%'}} source={{uri:'https://raw.githubusercontent.com/itzpradip/react-native-firebase-social-app/master/assets/onboarding-img1.png'}} />,
-            title: 'Get rescued during emergency',
-            subtitle: 'We have a highly active volunteer network that will ocme to help you during emergency',
+            backgroundColor: '#8a8ff0',
+            image: <Image  style={{width: 200, height: 400,resizeMode:'contain'}} source={require('../assets/2.png')} />,
+            title: <Text  style={{fontSize:25 ,fontFamily: "arial",fontWeight:"bold",marginBottom:25,color:"#fcc83c",alignContent:"center",alignItems:"center",textAlign:"center"}}>Get community rescue
+            in emergency</Text>,
+            subtitle:<Text  style={{fontSize:15 ,fontFamily: "arial",marginBottom:25,color:"black",alignContent:"center",alignItems:"center",textAlign:"center"}}>A watchful volunteer network to help you in emergency</Text>,
           },
           {
-            backgroundColor: '#e9bcbe',
-            image: <Image  style={{width: '50%', height: '50%'}} source={{uri:'https://raw.githubusercontent.com/itzpradip/react-native-firebase-social-app/master/assets/onboarding-img1.png'}} />,
-            title: 'Report civil incidents to authorities ',
-            subtitle: "We have a safety audit form for you",
+            backgroundColor: '#b8bbf1',
+            image: <Image  style={{width: 200, height: 400,resizeMode:'contain'}} source={require('../assets/3.png')} />,
+            title:  <Text  style={{fontSize:25 ,fontFamily: "arial",fontWeight:"bold",marginBottom:25,color:"#1e3181",alignContent:"center",alignItems:"center",textAlign:"center"}}>Safety audit your streets</Text>,
+            subtitle:<Text  style={{fontSize:15 ,fontFamily: "arial",marginBottom:25,color:"black",alignContent:"center",alignItems:"center",textAlign:"center"}}>Send your report to the local authorities to keep your streets safe</Text>,
           },
         ]}
       />
@@ -84,8 +81,9 @@ export default OnboardingScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
     alignItems: 'center', 
-    justifyContent: 'center'
+    justifyContent: 'center',
+    fontFamily:"",
+    color:"red"
   },
 });

@@ -51,21 +51,17 @@ const VolunteerScreen = () => {
         >
           <Icon name="arrow-back" type="ionicon" color="black" size={24} />
         </TouchableOpacity>
-        <Text style={tw`w-full font-semibold text-center text-xl`}>
-          Select a Volunteer 
-        </Text>
-      </View>
-      <Image source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/volunteer.png'}}
-       style={{width: 410, height: 400}} />
-      <FlatList
+    
+      </View> 
+
+      <FlatList     
         data={data}
         keyExtractor={(item) => item.id}
         renderItem={({ item: { id, multiplier, image, title }, item }) => (
           <TouchableOpacity
-            onPress={() => setSelected(item)}
-            style={tw`flex-row bg-white justify-around items-center px-10 ${
-              id === selected?.id && "bg-red-500"
-            }`}
+            style={tw`flex-row bg-white justify-around items-center px-10` } 
+            onPress={() => { navigation.navigate("ChatScreen"); }}
+
           >
             <Image
               style={{
@@ -73,25 +69,18 @@ const VolunteerScreen = () => {
                 height: 75,
                 resizeMode: "contain",
               }}
-              source={{ uri: image }}
-            />
+              source={{ uri: image }}  
+              onPress={() => { navigation.navigate("ChatScreen"); }}
+              />
 
-            <View>
+            <View       >
               <Text style={tw`text-lg font-semibold `}>{title}</Text>
             </View>
           </TouchableOpacity>
         )}
       />
 
-      <TouchableOpacity
-        disabled={!selected}
-        style={tw`bg-red-500 py-2 ${!selected && "bg-green-400"} `}
-        onPress={() => { navigation.navigate("CallScreen"); }}
-      >
-        <Text style={tw`text-center rounded-lg bg-opacity-75 text-xl`}>
-          Choose {selected?.title}
-        </Text>
-      </TouchableOpacity>
+ 
     </SafeAreaView>
   );
 };

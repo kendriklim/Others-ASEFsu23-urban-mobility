@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     paddingTop: 50,
   },
   image1: {
-    width: 350,
-    height: 200,
+    width: 550,
+    height: 350,
     position: 'relative',
     marginTop: 10,
   },
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const CallScreen = () => {
+const SubmitScreen = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
   const travelTimeInformation = useSelector(selectTravelTimeInformation);
@@ -77,7 +77,7 @@ const CallScreen = () => {
     };
 
   return (
-    <SafeAreaView style={tw`bg-white `}>
+    <SafeAreaView style={tw`bg-white flex-1`}>
       <View style={tw`flex-row items-center p-2 bg-white`}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
@@ -86,14 +86,12 @@ const CallScreen = () => {
           <Icon name="arrow-back" type="ionicon" color="black" size={24} />
         </TouchableOpacity>
       </View>
-
       <View style={{justifyContent: 'flex-start', alignItems: 'center', marginTop: 50}}>
         <Image
         style={styles.image1}
         source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/message.png'}}
         />
-        <Text style={tw`italic font-bold absolute top-20 bottom-10 flex justify-center text-center left-10 right-10 text-xl`}>Alina has accepted your request.
-         She will be there in 2 minutes</Text>
+        <Text style={tw`italic font-bold absolute top-20 bottom-10 flex justify-center text-center left-10 right-10 text-xl`}>Thanks for being a responsible citizen . We have notified the concerned authorities with the issue you reported,Rest assured,your issue will be resolved very soon.</Text>
       </View>
       <View style={{justifyContent: 'flex-start', alignItems: 'flex-end'}}>
         <Image
@@ -101,36 +99,8 @@ const CallScreen = () => {
         source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/female1.png'}}
         />
       </View>
-      
-      <View style={{flexDirection:'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 190}}>
-        <TouchableOpacity
-          style={{
-              alignItems:'center',
-              justifyContent:'center',
-            }}
-        >
-         <Image
-          style={styles.image2}
-          source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/call1.png'}}
-        />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-              alignItems:'center',
-              justifyContent:'center',
-            }}
-            onPress={() => { navigation.navigate("ChatScreen"); }}
-        >
-          <Image 
-          style={styles.image4}
-          source={{uri: 'https://raw.githubusercontent.com/Eric-nguyen1402/Project-2020/master/message5.png'}}
-          />
-          
-        </TouchableOpacity>
-        
-      </View>
     </SafeAreaView>
   );
 };
 
-export default CallScreen;
+export default SubmitScreen;

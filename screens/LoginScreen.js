@@ -11,6 +11,7 @@ import {
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 import SocialButton from '../components/SocialButton';
+import { ScreenHeight } from 'react-native-elements/dist/helpers';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
@@ -22,10 +23,15 @@ const LoginScreen = ({navigation}) => {
       
 
       <Image 
-      source={{uri:'https://media.istockphoto.com/vectors/multiethnic-women-different-ethnicity-women-african-asian-chinese-vector-id1223632197?k=20&m=1223632197&s=170667a&w=0&h=NEy_VIq52HFp_ltUyWUvqKBLTo41kFofbwcld-m1IPE='}}
+      source={require('../assets/woman_loginn.png')}
         style={styles.logo}
       />
-      <Text style={styles.text}>Walk Saath</Text>
+
+<Image 
+      source={require('../assets/logo.png')}
+        style={styles.logo1}
+      />
+      {/* <Text style={styles.text}>Walk Saath</Text> */}
       <FormInput
         labelValue={email}
         onChangeText={(userEmail) => setEmail(userEmail)}
@@ -91,13 +97,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingLeft:20,
-    paddingRight:20
+    paddingRight:20,
+    backgroundColor:"#fceb93",
+    height:ScreenHeight,
   },
   logo: {
-    height: 150,
-    width: 400,
-    marginBottom:25,
-    marginTop:0,
+ 
+    height: 200,
+    width: 390,
+    marginBottom:2,
+    marginTop:15,
+    resizeMode: 'cover',
+  },
+  logo1: {
+ 
+    height: 100,
+    width: 350,
+    marginBottom:35,
+    marginTop:5,
     resizeMode: 'cover',
   },
   text: {
