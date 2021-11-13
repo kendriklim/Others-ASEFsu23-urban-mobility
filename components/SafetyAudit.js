@@ -7,14 +7,16 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import {
 StyleSheet,SafeAreaView
 } from "react-native";
+import { TextInputMask } from 'react-native-masked-text'
+
+
 const SafetyAudit = ({navigation}) => {
   const [mydate, setDate] = useState(new Date());
   const [displaymode, setMode] = useState('date');
   const [isDisplayDate, setShow] = useState(false);
-  const changeSelectedDate = (event, selectedDate) => {
-  const currentDate = selectedDate || mydate;
-  setDate(currentDate);
-};
+  const changeSelectedDate = (event, selectedDate) => { const currentDate = selectedDate || mydate;
+    setDate(currentDate);
+    };
 const showMode = (currentMode) => {
   setShow(true);
   setMode(currentMode);
@@ -22,6 +24,35 @@ const showMode = (currentMode) => {
 const displayDatepicker = () => {
   showMode('date');
 };
+const [dateOfBirth, setDateOfBirth] = useState('');
+  const checkValue = (str, max) => {
+    if (str.charAt(0) !== '0' || str == '00') {
+      var num = parseInt(str);
+      if (isNaN(num) || num <= 0 || num > max) num = 1;
+      str =
+        num > parseInt(max.toString().charAt(0)) && num.toString().length == 1
+          ? '0' + num
+          : num.toString();
+    }
+    return str;
+  };
+  const handleDateOfBirth = value => {
+    var input = value;
+    let currentYear = new Date().getFullYear();
+    if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
+    var values = input.split('/').map(function (v) {
+      return v.replace(/\D/g, '');
+    });
+    if (values[0]) values[0] = checkValue(values[0], 31);
+    if (values[1]) values[1] = checkValue(values[1], 12);
+    if (values[2]) values[2] = checkValue(values[2], currentYear);
+
+    var output = values.map(function (v, i) {
+      return v.length == 2 && i < 2 ? v + ' / ' : v;
+    });
+    value = output.join('').substr(0, 20);
+    setDateOfBirth(value);
+  };
 
   return (
     <Card style={{backgroundColor:"#b8bbf1",height:ScreenHeight}}>
@@ -51,11 +82,36 @@ const displayDatepicker = () => {
       left={<TextInput.Icon name="alert" />}
     />
        <TextInput
-       mode="outlined"
-      label="Enter date and time of issue occourance"
-      left={<TextInput.Icon name="timetable" />}>
-       </TextInput>
-
+        label="Enter date and time of issue occurence"
+        value={dateOfBirth}
+        placeholder={'DD/MM/YYYY HH:MM'}
+        underlineColor={'#FFFFFF'}
+        selectionColor={'#000'}
+        keyboardType="number-pad"
+        maxLength={20}
+        returnKeyType="done"
+        spellCheck={false}
+        autoCorrect={false}
+        mode="outlined"
+        left={<TextInput.Icon name="timetable" />}
+        style={{
+          fontSize: 16,
+          backgroundColor: '#fff',
+          color: '#000',
+          paddingHorizontal: 0,
+        }}
+        onChangeText={val => handleDateOfBirth(val)}
+      />
+       {/* <TextInput
+          mode="outlined"
+          label="Enter date and time of issue occurence"
+          left={<TextInput.Icon name="timetable" />}>
+       </TextInput> */}
+       {/* <TextInput
+          mode="outlined"
+          label="Enter date and time of issue occurence"
+          left={<TextInput.Icon name="timetable" />}>
+       </TextInput> */}
          </Card.Content>
  
     <Card.Actions style={{alignContent:"center",alignSelf:"center",alignItems:"center"}}>
